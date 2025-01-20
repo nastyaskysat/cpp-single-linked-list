@@ -49,22 +49,22 @@ class SingleLinkedList
 
 		[[nodiscard]] bool operator==(const BasicIterator<const Type> &rhs) const noexcept
 		{
-			return ((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_) ? true : false;
+			return ((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_);
 		}
 
 		[[nodiscard]] bool operator!=(const BasicIterator<const Type> &rhs) const noexcept
 		{
-			return ((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_) ? false : true;
+			return !((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_);
 		}
 
 		[[nodiscard]] bool operator==(const BasicIterator<Type> &rhs) const noexcept
 		{
-			return ((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_) ? true : false;
+			return ((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_);
 		}
 
 		[[nodiscard]] bool operator!=(const BasicIterator<Type> &rhs) const noexcept
 		{
-			return ((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_) ? false : true;
+			return !((rhs.node_ == nullptr && node_ == nullptr) || node_ == rhs.node_);
 		}
 
 		BasicIterator &operator++() noexcept
@@ -129,7 +129,7 @@ public:
 
 	[[nodiscard]] bool IsEmpty() const noexcept
 	{
-		return (size_ == 0) ? true : false;
+		return (size_ == 0);
 	}
 
 	~SingleLinkedList()
